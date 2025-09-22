@@ -1,64 +1,94 @@
-# Titanic Data Cleaning & Preprocessing
+## Titanic Data Cleaning & Preprocessing
 
-## Description
-This repository demonstrates step-by-step data cleaning and preprocessing on the Titanic dataset. The goal is to prepare the dataset for machine learning by handling missing values, encoding categorical variables, scaling numerical features, and detecting/treating outliers.  
+A step-by-step project to clean and preprocess the Titanic dataset.
+This project is for data science learners or enthusiasts who want to understand:
 
-## Features
-- Handles missing values with median (for numeric features) and mode (for categorical features).
-- Encodes categorical variables using one-hot encoding.
-- Detects outliers using boxplots and caps them using the IQR method.
-- Scales numeric features using standardization (z-score).
-- Saves cleaned dataset and visualizations for easy reference.
-- Prepares data for ML tasks such as classification.
+Handling missing values
 
-## Folder Structure
-titanic-data-cleaning/
+Encoding categorical variables
+
+Scaling numerical features
+
+Detecting and treating outliers
+
+Preparing the dataset for machine learning
+
+Project Overview
+
+This project demonstrates preprocessing the Titanic dataset from raw data to a clean, ML-ready dataset. Key steps include:
+
+Loading and exploring the dataset
+
+Handling missing values (median for numeric, mode for categorical)
+
+Encoding categorical variables using one-hot encoding
+
+Outlier detection using boxplots and IQR capping
+
+Standardizing numerical features
+
+Saving necessary figures and cleaned dataset
+
+Folder Structure
+titanic_project/
 │
-├── data/
-│ ├── titanic.csv # Original raw dataset
-│ ├── titanic_clean.csv # Cleaned dataset ready for ML
-│ └── missing_after_imputation.csv # Missing values summary after imputation
-│
-├── figures/
-│ ├── histograms_age_fare.png # Age and Fare distribution plots
-│ └── boxplots_age_fare.png # Age and Fare boxplots for outlier detection
-│
-├── notebooks/
-│ └── titanic_data_cleaning.ipynb # Full Jupyter Notebook with all steps
-│
-├── README.md # This file
-└── .gitignore # Optional: ignore pycache, .ipynb_checkpoints, etc.
+├── titanic_data_cleaning.ipynb   # Jupyter Notebook with all preprocessing steps
+├── titanic.csv                   # Original dataset
+├── titanic_clean.csv             # Cleaned dataset
+├── histograms_age_fare.png       # Histograms of Age and Fare
+├── boxplots_age_fare.png         # Boxplots of Age and Fare
+├── missing_after_imputation.csv  # Missing value summary after imputation
+└── README.md                     # Project documentation
 
-bash
-Copy code
+How to Use
 
-## Usage
-1. Clone the repository:
-```bash
-git clone https://github.com/your-username/titanic-data-cleaning.git
-Open the notebook notebooks/titanic_data_cleaning.ipynb in Jupyter Notebook or Jupyter Lab.
+Clone the repository:
 
-Run all cells step by step to reproduce data cleaning, visualization, and preprocessing.
+git clone <your-repo-link>
 
-Check the data/ folder for cleaned dataset and missing value summary, and figures/ for plots.
 
-Requirements
-Python 3.x
+Open the Jupyter Notebook:
 
-Libraries: pandas, numpy, matplotlib, seaborn, scikit-learn
+jupyter notebook titanic_data_cleaning.ipynb
 
-bash
-Copy code
-pip install pandas numpy matplotlib seaborn scikit-learn
-Author
-Your Name
 
-References
-Titanic Dataset: Kaggle Titanic Dataset
+Run the notebook cells sequentially to:
 
-Data cleaning & preprocessing concepts from standard ML workflows.
+View dataset exploration
 
-pgsql
-Copy code
+Verify missing value handling
 
-If you want, I can also **rewrite the full notebook code** so it automatically saves all figures and tables into the proper `data/` and `figures/` folders to match this README perfectly. Do you want me to do that next?
+Generate plots for distributions and outliers
+
+Save the cleaned dataset and figures
+
+Running Tests
+
+This project does not include automated tests. To verify preprocessing steps:
+
+Open the notebook titanic_data_cleaning.ipynb.
+
+Run cells sequentially.
+
+Check outputs:
+
+Missing value summary (missing_after_imputation.csv)
+
+Outlier detection plots (boxplots_age_fare.png)
+
+Histograms (histograms_age_fare.png)
+
+Final cleaned dataset (titanic_clean.csv)
+
+Tech Stack
+
+Client: Jupyter Notebook, Matplotlib, Seaborn, Pandas, NumPy
+Server: Python 3.x
+
+Acknowledgements
+
+Seaborn: statistical data visualization
+
+Pandas Documentation
+
+Scikit-learn Preprocessing
